@@ -1,5 +1,6 @@
 # Example use case structure
 
+
 **Demo:**
 [![asciicast](https://asciinema.org/a/UGxBxIjBNlTwtY1Vp8TBA14EO.svg)](https://asciinema.org/a/UGxBxIjBNlTwtY1Vp8TBA14EO)
 
@@ -9,7 +10,25 @@ Packing websites into containers is a common practice. However, sometimes you ju
 
 In this example we use Hugo, a static site generator along goexec to serve the http assets. 
 
-Describe the use-case for UOR and advantages of using UOR for this over existing methods. 
+## Flow
+```mermaid
+sequenceDiagram
+    participant workstation
+    participant registry
+    participant host
+    workstation->>registry: dev and prod
+    host->>registry: uor pull with tags
+    registry->>host: tagged site
+
+```
+
+## Outline
+
+```mermaid
+  graph TD;
+      Collection-->Dev;
+      Collection-->Prod;
+```
 
 ## Demo resources
 UOR, hugo, and goexec
