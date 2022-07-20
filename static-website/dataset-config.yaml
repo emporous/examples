@@ -4,11 +4,15 @@ files:
   - file: dev/public/*
     attributes:
       release: dev
-      theme: ananke
   - file: prod/public/*
     attributes:
       release: prod
-      theme: PaperMod
   - file: "*/public/images/*"
     attributes:
       type: image
+  - file: "*/themes/anake"
+    attributes:
+      theme: anake
+  - file: "*/themes/PaperMod"
+    attributes:
+      theme: PaperMod
