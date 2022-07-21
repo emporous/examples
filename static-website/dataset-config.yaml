@@ -10,9 +10,9 @@ files:
   - file: "*/public/images/*"
     attributes:
       type: image
-  - file: "*/themes/anake"
+  - file: "*/themes/ananke"
     attributes:
-      theme: anake
+      theme: ananke
   - file: "*/themes/PaperMod"
     attributes:
       theme: PaperMod
