@@ -33,7 +33,7 @@ sequenceDiagram
 ## Demo resources
 UOR, hugo, and goexec
 See [Installing Hugo](https://gohugo.io/getting-started/installing/) to install hugo 
-Run `go get -u github.com/shurcooL/goexec` to install goexec to serve the http server
+Run `go install github.com/shurcooL/goexec@latest` to install goexec to serve the http server
 
 
 ## Demo instructions
