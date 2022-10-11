@@ -3,7 +3,7 @@
 
 **Demo:**
 
-https://raw.githubusercontent.com/sfxworks/uor-framework-examples/main/misc/2022-09-01_05-32-53.avi.h264.30.gpu.mp4
+https://raw.githubusercontent.com/sfxworks/uor-framework-examples/main/OS/misc/2022-09-01_05-32-53.avi.h264.30.gpu.mp4
 
 ## Use case description
 
