@@ -8,27 +8,7 @@ https://user-images.githubusercontent.com/5921035/195056739-3ba67fc3-e47e-4a39-9
 
 ## Use case description
 
-Servers ram 
-
-## Flow
-```mermaid
-sequenceDiagram
-    participant workstation
-    participant registry
-    participant baremeta
-    workstation->>registry: dev and prod
-    host->>registry: uor pull with tags
-    registry->>host: tagged site
-
-```
-
-## Outline
-
-```mermaid
-  graph TD;
-      Collection-->Dev;
-      Collection-->Prod;
-```
+Upkeeping kubernetes nodes can be a bit cumbersome. Why not use UOR to apply machine specific configuration ontop of an ephemeral OS like arch linux? Worker node cattle! 
 
 ## Demo resources
 podman, VM or Baremetal Machine
