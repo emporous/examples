@@ -1,0 +1,1 @@
+podman run ghcr.io/uor-framework/examples/gocontainerregistry

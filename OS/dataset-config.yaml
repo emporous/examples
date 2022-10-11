@@ -1,0 +1,105 @@
+kind: DataSetConfiguration
+apiVersion: client.uor-framework.io/v1alpha1
+collection:
+  files:
+    # CRIO configuration defaults
+    - file: etc/crio/*
+      attributes:
+        machine: all
+    # Container configuration files (custom mirrors etc)
+    - file: etc/containers/*
+      attributes:
+        machine: all
+    # Nebula Binary
+    - file: usr/bin/nebula
+      attributes:
+        machine: all
+        type: binary
+        binary: nebula
+        version: "1.6.0"
+    - file: usr/bin/nebula-cert
+      attributes:
+        machine: all
+        type: binary
+        binary: nebula
+        version: "1.6.0"
+    # Custom runtime, crun
+    - file: usr/bin/crun
+      attributes:
+        machine: all
+        type: binary
+        binary: crun
+        package: kubernetes
+        version: "1.5"
+    # Crictl
+#    - file: usr/bin/crictl
+#      attributes:
+#        machine: all
+#        type: binary
+#        binary: crictl
+#        package: kubernetes
+#        version: "1.22"
+    # CNI binaries
+#    - file: opt/cni/bin/*
+#      attributes:
+#        machine: all
+#        type: binary
+#        binary: cni
+#        package: kubernetes
+#        version: "0.8.2"
+    #kubelet, kubeadm kubectl
+#    - file: usr/bin/kubelet
+#      attributes:
+#        machine: all
+#        type: binary
+#        binary: kubelet
+#        package: kubernetes
+#        version: "1.25.0"
+#    - file: usr/bin/kubeadm
+#      attributes:
+#        machine: all
+#        type: binary
+#        binary: kubeadm
+#        package: kubernetes
+#        version: "1.25.0"
+    - file: etc/kubeadm/*.yaml
+      attributes:
+        machine: all
+        type: binary
+        binary: kubeadm
+        package: kubernetes
+        version: "1.25.0"
+#    - file: usr/bin/kubectl
+#      attributes:
+#        machine: all
+#        type: binary
+#        binary: kubectl
+#        package: kubernetes
+#        version: "1.25.0"
+    # Nebulca CA for all machines
+    - file: etc/nebula/ca.crt
+      attributes:
+        machine: all
+    - file: etc/nebula/config.yaml
+      attributes:
+        machine: all
+    - file: usr/lib/systemd/system/*.service
+      attributes:
+        machine: all
+        type: systemd
+    - file: init.sh
+      attributes:
+        machine: all
+        type: init
+    - file: etc/default/kubelet
+      attributes:
+        machine: all
+    # Begin Machine Specific Config
+    # 08:00:27:8a:30:7c
+    - file: etc/nebula/08:00:27:8a:30:7c/*
+      attributes:
+        mac: 08:00:27:8a:30:7c
+    - file: etc/hosts
+      attributes:
+        mac: 08:00:27:8a:30:7c
+    # End Machine Specific Config
