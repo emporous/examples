@@ -27,6 +27,8 @@ This demo utilizes nebula as an example of machine specific configuration. The n
 - The address of the registry used. `go.registry` is used in this example. This can be adjusted inside the [automated_script.sh](airootfs/root/.automated_script.sh)
 
 
+### Running the demo 
+
 0. (Optional) Host a registry in memory! `podman run -d --name gocontainerreg -p 1338:1338 --restart unless-stopped ghcr.io/uor-framework/examples/gocontainerregistry`
 1. Build the ISO.
 `podman run --privileged -v .:/profile ghcr.io/uor-framework/examples/archiso:latest mkarchiso -v -w /tmp -o /profile/out /profile`
