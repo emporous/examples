@@ -1,3 +1,2 @@
-FROM registry.service.mcserverhosting.net/docker/library/archlinux
+FROM docker.io/library/archlinux
 RUN pacman -Syu --noconfirm archiso 
-
