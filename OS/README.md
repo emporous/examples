@@ -38,4 +38,5 @@ This demo utilizes nebula as an example of machine specific configuration. The n
 5. Enjoy!
 
 ## What's next?
-Configure more machine specifics! 
+
+Configure more machine specifics! Maybe some machines in some regions would benefit from using a local mirror first? This can be adjusted in the crio configuration files. Give it a shot! 
