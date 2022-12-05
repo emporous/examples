@@ -1,0 +1,23 @@
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: JoinConfiguration
+nodeRegistration:
+  name: uor-$UUID
+  taints: []
+  kubeletExtraArgs:
+    resolv-conf: /etc/resolv.conf
+    cgroup-driver: systemd
+    node-labels: "io.universalreference.node/managed=true"
+discovery:
+  bootstrapToken:
+    apiServerEndpoint: 192.168.5.1:6443
+    token: qwerty
+    caCertHashes:
+    - sha256:qwerty
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+kubernetesVersion: stable
+controlPlaneEndpoint: 192.168.5.1:6443
+
+#Even in changing these definitions and the kubeadm-config file there still lies something that is telling iboutu 192.168.8.1...i remember it was uhhhh...potential y cluster api endpoint settings. but thats here. but that isnt read in join config. 
+# So is it perm in cluster config? controlPlaneEndpoint
