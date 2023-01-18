@@ -1,0 +1,5 @@
+kind: SchemaConfiguration
+apiVersion: client.emporous.io/v1alpha1
+schema:
+  attributeTypes:
+    "test": "string"
