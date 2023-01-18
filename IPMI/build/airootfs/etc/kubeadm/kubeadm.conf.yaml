@@ -1,7 +1,7 @@
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: JoinConfiguration
 nodeRegistration:
-  name: uor-$UUID
+  name: emporous-$UUID
   taints: []
   kubeletExtraArgs:
     resolv-conf: /etc/resolv.conf

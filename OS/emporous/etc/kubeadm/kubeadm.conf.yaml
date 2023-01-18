@@ -1,11 +1,11 @@
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: JoinConfiguration
 nodeRegistration:
-  name: uor-node
+  name: emporous-node
   taints: []
   kubeletExtraArgs:
     enable-controller-attach-detach: "false"
-    node-labels: "uor-node=demo"
+    node-labels: "emporous-node=demo"
     node-ip: $NEBULAIP
     resolv-conf: /etc/resolv.conf
 discovery:

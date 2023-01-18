@@ -1,6 +1,6 @@
 # examples
 
-This repo contains examples of uor-use cases and demos.
+This repo contains examples of Emporous use cases and demos.
 
 ## Structure
 Each use-case is represented by a directory under repo root and should contain the structure of the  `./use-case-directory-TEMPLATE/` example below. Not all items must be present in all example use-cases.

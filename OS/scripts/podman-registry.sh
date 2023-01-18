@@ -1,1 +1,1 @@
-podman run ghcr.io/uor-framework/examples/gocontainerregistry
+podman run ghcr.io/emporous/examples/gocontainerregistry

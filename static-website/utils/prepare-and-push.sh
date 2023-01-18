@@ -15,4 +15,4 @@ git submodule update --init --recursive
 hugo -D
 popd
 
-uor push --dsconfig dataset-config.yaml $flags demo-content $registry:static-website
+emporous push --dsconfig dataset-config.yaml $flags demo-content $registry:static-website
