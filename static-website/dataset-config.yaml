@@ -1,18 +1,19 @@
 kind: DataSetConfiguration
-apiVersion: client.uor-framework.io/v1alpha1
-files:
-  - file: dev/public/*
-    attributes:
-      release: dev
-  - file: prod/public/*
-    attributes:
-      release: prod
-  - file: "*/public/images/*"
-    attributes:
-      type: image
-  - file: "*/themes/ananke"
-    attributes:
-      theme: ananke
-  - file: "*/themes/PaperMod"
-    attributes:
-      theme: PaperMod
+apiVersion: client.emporous.io/v1alpha1
+collection:
+  files:
+    - file: dev/public/*
+      attributes:
+        release: dev
+    - file: prod/public/*
+      attributes:
+        release: prod
+    - file: "*/public/images/*"
+      attributes:
+        type: image
+    - file: "*/themes/ananke"
+      attributes:
+        theme: ananke
+    - file: "*/themes/PaperMod"
+      attributes:
+        theme: PaperMod

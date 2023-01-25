@@ -6,7 +6,7 @@
 
 ## Use case description
 
-Packing websites into containers is a common practice. However, sometimes you just want to make your site as light as possible. Especially in static site cases where you just need the content. UOR allows you to store your site in a container registry and easily push/pull the site ready to serve. 
+Packing websites into containers is a common practice. However, sometimes you just want to make your site as light as possible. Especially in static site cases where you just need the content. Emporous allows you to store your site in a container registry and easily push/pull the site ready to serve. 
 
 In this example we use Hugo, a static site generator along goexec to serve the http assets. 
 
@@ -17,7 +17,7 @@ sequenceDiagram
     participant registry
     participant host
     workstation->>registry: dev and prod
-    host->>registry: uor pull with tags
+    host->>registry: emporous pull with tags
     registry->>host: tagged site
 
 ```
@@ -31,7 +31,7 @@ sequenceDiagram
 ```
 
 ## Demo resources
-UOR, hugo, and goexec
+Emporous, hugo, and goexec
 See [Installing Hugo](https://gohugo.io/getting-started/installing/) to install hugo 
 Run `go install github.com/shurcooL/goexec@latest` to install goexec to serve the http server
 

@@ -1,1 +1,0 @@
-KUBELET_EXTRA_ARGS="--node-ip=$NEBULAIP --node-labels="node-role.kubernetes.io/uor-node=demo""

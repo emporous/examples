@@ -40,8 +40,8 @@ mount -o remount,size=4G /run/archiso/cowspace
 DEFAULT_IFACE=`route | grep '^default' | grep -o '[^ ]*$' | head -n 1`
 export MAC=`cat /sys/class/net/$DEFAULT_IFACE/address`
 envsubst < machine-query.yaml | sponge machine-query.yaml
-uor pull go.registry:1338/test:latest --output="/" --attributes=all-query.yaml --insecure --plain-http
-uor pull go.registry:1338/test:latest --output="/" --attributes=machine-query.yaml --insecure --plain-http
+emporous pull go.registry:1338/test:latest --output="/" --attributes=all-query.yaml --insecure --plain-http
+emporous pull go.registry:1338/test:latest --output="/" --attributes=machine-query.yaml --insecure --plain-http
 chmod +x /init.sh
 sh /init.sh
 

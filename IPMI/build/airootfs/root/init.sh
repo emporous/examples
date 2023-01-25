@@ -21,9 +21,9 @@ mount $DISK /mnt
 systemctl enable --now crio 
 export UUID=$(cat /sys/class/dmi/id/board_serial)
 envsubst < /etc/kubeadm/kubeadm.conf.yaml | sponge /etc/kubeadm/kubeadm.conf.yaml
-echo "uor-$UUID" > /etc/hostname
-echo "127.0.0.1 uor-$UUID" > /etc/hosts
-echo "::1 uor-$UUID" >> /etc/hosts
+echo "emporous-$UUID" > /etc/hostname
+echo "127.0.0.1 emporous-$UUID" > /etc/hosts
+echo "::1 emporous-$UUID" >> /etc/hosts
 
 
 modprobe br_netfilter

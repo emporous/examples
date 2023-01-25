@@ -1,0 +1,6 @@
+kind: AttributeQuery
+apiVersion: client.emporous.io/v1alpha1
+attributes:
+  converted:
+    release: ${release}
+

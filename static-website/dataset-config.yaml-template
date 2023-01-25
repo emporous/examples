@@ -1,0 +1,20 @@
+kind: DataSetConfiguration
+apiVersion: client.emporous.io/v1alpha1
+collection:
+  schemaAddress: "$schemaAddress"
+  files:
+    - file: "dev/public/*"
+      attributes:
+        release: dev
+    - file: "prod/public/*"
+      attributes:
+        release: prod
+    - file: "*/public/images/*"
+      attributes:
+        type: image
+    - file: "*/themes/ananke"
+      attributes:
+        theme: ananke
+    - file: "*/themes/PaperMod"
+      attributes:
+        theme: PaperMod

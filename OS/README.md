@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/5921035/195056739-3ba67fc3-e47e-4a39-9
 
 ## Use case description
 
-Upkeeping kubernetes nodes can be a bit cumbersome. Why not use UOR to apply machine specific configuration ontop of an ephemeral OS like arch linux? Worker node cattle! 
+Upkeeping kubernetes nodes can be a bit cumbersome. Why not use Emporous to apply machine specific configuration ontop of an ephemeral OS like arch linux? Worker node cattle! 
 
 ## Demo resources
 podman, VM or Baremetal Machine
@@ -17,9 +17,9 @@ podman, VM or Baremetal Machine
 
 ### Prerequisites
 
-This demo joins a k8s node into an existing cluster. Therefor, an existing cluster is needed. Generate a token using `kubeadm token create --print-join-command` and adjust the appropriate values in the [kubeadm-config](uor/etc/kubeadm/kubeadm.conf.yaml)
+This demo joins a k8s node into an existing cluster. Therefor, an existing cluster is needed. Generate a token using `kubeadm token create --print-join-command` and adjust the appropriate values in the [kubeadm-config](emporous/etc/kubeadm/kubeadm.conf.yaml)
 
-This demo utilizes nebula as an example of machine specific configuration. The node can be joined from outside the cluster's network assuming the cluster is also configured to use Nebula. In summary, place nebula configuration inside [nebula](uor/etc/nebula). More information on how to configure nebula can be found [here](https://nebula.defined.net/docs/guides/quick-start/)
+This demo utilizes nebula as an example of machine specific configuration. The node can be joined from outside the cluster's network assuming the cluster is also configured to use Nebula. In summary, place nebula configuration inside [nebula](emporous/etc/nebula). More information on how to configure nebula can be found [here](https://nebula.defined.net/docs/guides/quick-start/)
 
 ### Preconfigured adjustable values are:
 
@@ -29,13 +29,13 @@ This demo utilizes nebula as an example of machine specific configuration. The n
 
 ### Running the demo 
 
-0. (Optional) Host a registry in memory! `podman run -d --name gocontainerreg -p 1338:1338 --restart unless-stopped ghcr.io/uor-framework/examples/gocontainerregistry`
+0. (Optional) Host a registry in memory! `podman run -d --name gocontainerreg -p 1338:1338 --restart unless-stopped ghcr.io/emporous/examples/gocontainerregistry`
 1. Build the ISO.
-`podman run --privileged -v .:/profile ghcr.io/uor-framework/examples/archiso:latest mkarchiso -v -w /tmp -o /profile/out /profile`
+`podman run --privileged -v .:/profile ghcr.io/emporous/examples/archiso:latest mkarchiso -v -w /tmp -o /profile/out /profile`
 2. Build the collection.
-`uor build collection uor go.registry:1338/test:latest --dsconfig=dataset-config.yaml `
+`emporous build collection emporous go.registry:1338/test:latest --dsconfig=dataset-config.yaml `
 3. Push the collection to the registry.
-`uor push go.registry:1338/test:latest --insecure --plain-http`
+`emporous push go.registry:1338/test:latest --insecure --plain-http`
 4. Launch a VM with the mac address defined in the dataset-config.yaml.
 5. Enjoy!
 
